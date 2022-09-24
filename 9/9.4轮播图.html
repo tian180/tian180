@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider{
+            width: 550px;
+            height: 310px;
+            border: 10px solid black;
+            margin: 50 auto 0;
+            position:relative;
+            margin: 0 auto;
+        }
+        #left{
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            margin-top: -13.5;
+        }
+        #right{
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top: -13.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <img id="left" src="./images/lbt/prev.png">
+        <img id="img" src="./images/lbt/img01.jpg">
+        <img id="right" src="./images/lbt/next.png">
+    </div>
+    <script>
+        // 获取元素
+        var img1 = document.getElementById('left')
+        var img2 = document.getElementById('img')
+        var img3 = document.getElementById('right')
+        var num = 1
+        // 点击img3，切换图片：修改img2的的src属性值
+        img3.onclick = function(){
+            num = num + 1
+            if(num ==5){
+                num = 1
+            }
+            img2.src = './images/lbt/img0'+ num + '.jpg'
+        }
+        // 点击img1，切换图片：修改img2的的src属性值
+        img1.onclick = function(){
+            num = num - 1
+            if(num ==0){
+                num = 4
+            }
+            img2.src = './images/lbt/img0'+ num + '.jpg'
+        }
+    </script>
+</body>
+</html>

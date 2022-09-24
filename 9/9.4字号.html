@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        body{
+            background-color: bisque;
+        }
+        button{
+            font-size: 40px;
+        }
+        p{
+            width: 400px;
+            margin: 0 auto;
+            background-color: burlywood;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="container">
+       <button>大</button><button>小</button>
+       <p> 
+            “时间是百代的过客,岁月是光华的流逝,纵使太多的美丽不期而去,也留下太多的痕迹。
+        花开花落,默默无声,一天一月一年,默默无声,用彼此的身躯支撑了整个花期,虽败犹存;留下的是那“落红不是无情物,化作春泥更护花”的花痕。花无言,岁月的摧残、时间的过客、都比不得它们用肢体诠释的美韵,默默坚守着那一毫对花期的坚忍,如此便好。
+        步步为营的人生太累,侃侃而谈的生活太假:而随遇而安的旅途:惬意、淡然、安闲所适,恰恰是我们所要追求的。守得属于自己的一片…………
+        </p>
+        <Script>
+            // 目标A：点击按钮大，让字号变大
+            //1. 获取元素
+            var btn0 = document.querySelectorAll('button')[0]//[btn1，btn2]
+            var btn1 = document.querySelectorAll('button')[1]//[btn1，btn2]
+            var op = document.querySelector('p')
+            // 4.读取不到行间字号的16px，自创一个数字变量
+            var num = 16
+            // 2.给btn1添加点击事件
+            btn0.onclick = function(){
+                // 5.核心点：点一下按钮，修改num的值
+                if(num<30){
+                    num +=2
+                }
+                
+                //3. 修改op元素对象的字号font-size属性
+                console.log(num)
+                op.style.fontSize  = num +'px'
+            }
+            // 目标B:点击按钮小，让字号变小
+            // 2.给btn1添加点击事件
+            var num = 16
+            // 2.给btn1添加点击事件
+            btn1.onclick = function(){
+                // 5.核心点：点一下按钮，修改num的值\
+                // 6.num-=2这件事的发生有条件：num > 12
+                if(num > 12){
+                    num -=2
+                }
+                
+                //3. 修改op元素对象的字号font-size属性
+                console.log(num)
+                op.style.fontSize  = num +'px'
+            }
+        </Script>
+    </div>
+</body>
+
+</html>

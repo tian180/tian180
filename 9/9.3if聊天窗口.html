@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天窗口</title>
+    <style>
+        .container {
+            width: 500px;
+            border: solid 1px black;
+            margin: 0 auto;
+            background-color: aquamarine;
+        }
+
+        .box {
+            width: 100%;
+            height: 200px;
+            background-color: white;
+        }
+        .word{
+            background-color: rgb(237, 127, 200);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        人机：<input type="text"><button>发送</button>
+    </div>
+    <script>
+        // 目标：点击按钮让内容发送到box内
+        // 1.获取元素
+        var box = document.querySelector('.box')
+        var input = document.querySelector('input')
+        var btn = document.querySelector('button')
+        var span = document.querySelector('span')
+        //2.点击btn，添加事件处理函数
+        btn.onclick =function(){
+            // 5发送文件条件：input.value不能为空
+            if(input.value == ''){
+                alert('消息没填写你想发送啥？')
+            }else{
+                // 3：①读取input的value值，然后写入box
+            box.innerHTML +=`<div><span>人机：</span><span class='word'>${input.value}</span></div>` 
+            // 4.②清空input的value值
+            input.value = ''
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

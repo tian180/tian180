@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wenzi{
+            width: 500px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="anniu">
+    <button id="da">大</button>
+    <button id="xiao">小</button>
+    </div>
+    <div class="wenzi">
+        <span id="w1">
+            阿斯顿发个会尽快阿斯顿发个会尽快千万人特高蛋白吃人格辅导班从湘潭好办法VG大部分说挺好的不服从说活动板房
+        </span>
+    </div>
+        <script>
+            // 获取元素
+            var Da = document.getElementById('da')
+            var Xiao = document.getElementById('xiao')
+            var Wz = document.getElementById('w1')
+            // 点击da让文字字号变大
+            num = 16 
+
+            Da.onclick = function(){
+                num = num + 44
+                if( num = 60){
+                    num = 60
+                }
+                Wz.style.fontSize = num + 'px'
+            }
+
+            // 点击xiao让文字字号变小
+            Xiao.onclick = function(){
+                num = num - 6
+                if(num = 10){
+                    num = 10
+                }
+                Wz.style.fontSize = num +'px'
+            }
+        </script>
+    
+</body>
+</html>

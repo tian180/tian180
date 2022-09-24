@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        button {
+            font-size: 50px;
+            margin-left: 40px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 50px;
+            
+        }
+        .lvse{
+            color: aqua;
+        }
+        
+        .hongse{
+            color: red;
+        }
+        .heise{
+            color: black;
+        }
+        .div{
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="div">计数器</div>
+        <p class="lvse heise hongse ">0</p>
+        <button class="jian">减</button>
+        <button class="cz">重置</button>
+        <button class="jia">加</button>
+    </div>
+    <script>
+        // 获取元素
+        
+        var btn1 = document.querySelector('.jian')
+        var btn2 = document.querySelector('.cz')
+        var btn3 = document.querySelector('.jia')
+        var p = document.querySelector('p')
+        // 定义变量
+        var num = 0
+        // var btn = document.querySel ectorAll('button')
+        // 点击重置让p的内容清零 
+        btn2.onclick = function(){
+            p.className = 'heise'
+            num = 0
+            p.innerHTML = num
+        }
+        // 点击btn1让p的数值递减
+        btn1.onclick = function(){
+            num--
+            p.innerHTML=num
+            if(p.innerHTML<0){
+            p.className = 'lvse'
+            }else if(p.innerHTML==0){
+                p.className = 'heise'
+            }
+        }
+        // 点击btn2让p的数值递增
+        btn3.onclick = function(){
+            num++
+            p.innerHTML=num
+            if(p.innerHTML>0){
+            p.className = 'hongse'
+            }else if(p.innerHTML==0){
+                p.className = 'heise'
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto 0;
+            border: 4px solid #ccc;
+            background-color: aliceblue;
+        }
+
+        #win {
+            background-color: #fff;
+            height: 150px;
+        }
+
+        #msg {
+            width: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="win"></div>
+        <div>
+            <input type="text" id="msg">
+            <button id="btn">发送</button>
+        </div>
+    </div>
+
+    <script>
+        // 获取元素
+        var oInput = document.getElementById('msg')
+        var oBtn = document.getElementById('btn')
+        var oDiv = document.getElementById('win')
+        var msg = ''
+        oBtn.onclick = function () {
+            if (oInput.value == '') {
+                // window.alert('大傻逼')
+                oInput.style.boxShadow = '0px 0px 1px 1px red'
+            } else {
+                msg = oInput.value
+                oDiv.innerHTML = '<p>' + msg + '</p>' + oDiv.innerHTML
+                oInput.value = ''
+            }
+        }
+        // 点框让边框红色去掉
+        oInput.onclick = function () {
+            oInput.style.boxShadow = ''
+        }
+    </script>
+</body>
+
+</html>
