@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            margin: 50px auto;
+        }
+
+        nav>a {
+            /*子元素选择器，选择子元素*/
+            display: block;
+            position: relative;
+            width: 100%;
+            background-color: aquamarine;
+        }
+
+        .sub {
+            display: none;
+            background-color: pink;
+            position: absolute;
+            width: 200px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">一级菜单
+            <ul class="sub">
+
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </a>
+    </nav>
+
+    <Script>
+        //目标1 鼠标悬停在a标签上，显示sub
+        // 1.获取元素
+        var a = document.querySelector('nav a')
+        var ul = document.querySelector('.sub')
+        // 2.鼠标悬停在a标签
+        a.onmouseover = function () {
+            // 3.显示sub：通过修改class
+            ul.className = 'sub active'
+        }
+        //目标2 鼠标移出a标签，隐藏sub
+        // 1添加鼠标移出a标签事件
+        a.onmouseout = function () {
+            ul.className = 'sub'
+        }
+    </Script>
+</body>
+
+</html>

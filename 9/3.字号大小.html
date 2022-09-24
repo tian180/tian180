@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="x">缩小</button>
+    <button id="d">增大</button>
+    <p id="div1">无论这个世界对你怎样，都请你一如既往的努力，人生是一场一个人的旅程，无人可替代</p>
+    <script>
+        //引用对象
+        var sx = document.getElementById('x')
+        var zd = document.getElementById('d')
+        var wz = document.getElementById('div1')
+        var num = 16 
+        // 让缩小到14
+        sx.onclick = function(){
+            if(num > 14){
+                num = num  - 1
+         wz.style.fontSize = num+'px'   
+            }else{
+                num
+          wz.style.fontSize = num+'px'   
+            }
+        }
+        // 让增大到24
+        zd.onclick = function(){
+              if(num < 24){
+                num = num  + 1
+         wz.style.fontSize = num+'px' 
+              }else{
+                num
+         wz.style.fontSize = num+'px' 
+              }
+        }
+    </script>
+</body>
+</html>

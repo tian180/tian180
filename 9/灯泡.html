@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+        position: absolute;
+        left: 100px;
+        top: 0;
+        } 
+    </style>
+</head>
+<body>
+    <button id="on">开</button>
+    <button id="off">关</button>    
+    <img src="./images/2.gif" id="img2">        
+    <img src="./images/1.gif" id="img1">
+</body>
+<script>
+     document.getElementById('on').onclick=function(){
+        document.getElementById('img1').style.display='none'
+        document.getElementById('img2').style.display='block'
+
+     }
+     document.getElementById('off').onclick=function(){
+        document.getElementById('img2').style.display='none'
+        document.getElementById('img1').style.display='block'
+     }
+</script>
+</html>

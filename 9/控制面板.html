@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 600px;
+            height: 600px;
+            background-color: beige;
+        }
+        #wz{
+            font-size: 24px;
+            font-weight: 700;
+            color:black;
+        }
+        #btn{
+            background-color: red;
+            color: aliceblue;
+            font-size: 18px;
+            width: 100px;
+            height: 40px;
+            border: 0px;
+        }
+        #btn1{
+            width: 150px;
+            height: 150px;
+            border: 5px solid black;
+            position: fixed;
+            left: 20px;
+            top: 50px;
+            background-color: #ccc;
+        }
+        #box2{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            color: rgb(28, 128, 215);
+            font-size: 20px;
+            font-weight: 700;
+            padding-left: 30px;
+            /* padding-top: 30px; */
+            position: fixed;
+            left: 700px;
+            border: 20px solid rgb(223, 223, 223);
+            line-height: 40px;
+            display: none;
+        }
+        #box2 button{
+            width: 50px;
+            height:25px;
+        }
+        #hong{
+            background-color: red;
+            border: 0px;
+            color: aliceblue;
+        }
+        #lv{
+            background-color: green;
+            border: 0px;
+            color: aliceblue;
+        }
+        #lan{
+            background-color: blue;
+            border: 0px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div><span id="wz">请为下面的DIV设置样式:</span><button id="btn">点击设置</button></div>
+        <div id="btn1"></div>
+        <div id="box2">
+            <div id="yan">
+                <div id="yanse">请选择背景颜色:</div>
+                <button id="hong">红</button>
+                <button id="lv">绿</button>
+                <button id="lan">蓝</button>
+            </div>
+            <div id="width">
+                <div>请选择宽(px):</div>
+                <button id="w200">200</button>
+                <button id="w300">300</button>
+                <button id="w400">400</button>
+            </div>
+            <div id="height">
+                <div>请选择高(px):</div>
+                <button id="h200">200</button>
+                <button id="h300">300</button>
+                <button id="h400">400</button>
+            </div>
+            <div id="xuanxiang">
+                <button id="huifu">恢复</button>
+                <button id="ok">确定</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 获取元素
+        var box1 = document.getElementById('box1')
+        var btn = document.getElementById('btn')
+        var wz = document.getElementById('wz')
+        var btn1 = document.getElementById('btn1')
+        var box2 = document.getElementById('box2')
+        var yan = document.getElementById('yan')
+        var yanse = document.getElementById('yanse')
+        var hong = document.getElementById('hong')
+        var lv = document.getElementById('lv')
+        var lan = document.getElementById('lan')
+        var width = document.getElementById('width')
+        var w200 = document.getElementById('w200')
+        var w300 = document.getElementById('w300')
+        var w400 = document.getElementById('w400')
+        var height = document.getElementById('height')
+        var h200 = document.getElementById('h200')
+        var h300 = document.getElementById('h300')
+        var h400 = document.getElementById('h400')
+        var xuanxiang = document.getElementById('xuanxiang')
+        var huifu = document.getElementById('huifu')
+        var ok = document.getElementById('ok')
+        // 点击设置
+        btn.onclick = function(){
+            box2.style.display = 'block'
+        }
+        // 调色
+        hong.onclick = function(){
+            btn1.style.background = 'red'
+        }
+        lv.onclick = function(){
+            btn1.style.background = 'green'
+        }
+        lan.onclick = function(){
+            btn1.style.background = 'blue'
+        }
+        // 调宽
+        w200.onclick = function(){
+            btn1.style.width = '200'+'px'
+        }
+        w300.onclick = function(){
+            btn1.style.width = '300'+'px'
+        }
+        w400.onclick = function(){
+            btn1.style.width = '400'+'px'
+        }
+        // 调高
+        h200.onclick = function(){
+            btn1.style.height = '200'+'px'
+        }
+        h300.onclick = function(){
+            btn1.style.height = '300'+'px'
+        }
+        h400.onclick = function(){
+            btn1.style.height = '400'+'px'
+        }
+        // 选项
+        ok.onclick = function(){
+            box2.style.display = 'none'
+        }
+        
+        huifu.onclick =function(){
+            btn1.style.height = '100px'
+            btn1.style.width = '100px'
+            btn1.style.border = '3px solid black'
+            btn1.style.backgroundColor = '#ccc'
+            box2.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
