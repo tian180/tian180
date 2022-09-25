@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #box{
+            display: flex;
+
+        } */
+    </style>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <div id="box"></div>
+    <script>
+        // 终极目标：点击按钮把十个有不同背景色div写入box里
+        // 第一步：获取元素：btn   box
+        var btn = document.getElementById('btn')
+        var oDiv = document.getElementById('box')
+        var str = ''
+        var colors = ['red','yellow','pink','blue']
+        // 第二步：点击btn，向oDiv生成10（手动添加)个不同背景色的div
+        btn.onclick = function(){
+
+            // 第三步：用循环生成10个div
+            // 第四步：添加背景色
+            for(var i=0; i<=10; i=i+1){
+                str = str +'<div style="background:'+colors[i%4]+'">'+ i +'</div>'//添加新内容，不是覆盖原有内容！
+            } 
+            oDiv.innerHTML = str //提高性能
+        }
+
+    </script>
+</body>
+</html>

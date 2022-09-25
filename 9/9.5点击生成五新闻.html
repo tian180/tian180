@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成五条新闻</title>
+
+</head>
+
+<body>
+    <button id="btn">别点我呀</button>
+    <ul id="xinwen"></ul>
+    <script>
+        var arr = [
+            '没蹭上刘德华的热度，因主持差“翻车”，李好该反思',
+            '47岁周迅饭桌上抽雪茄！手拿打火机姿势娴熟大口抽烟',
+            '林志颖“救命恩人”收到感谢礼物：21箱饮料24杯奶茶',
+            '电影《无名》发预告：梁朝伟出镜，王一博造型惊艳',
+            '李湘一家英国生活优渥！王诗龄满身奢侈品看歌剧',
+        ]
+        // 核心问题：点击按钮生成五条新闻
+
+        // 第一步：获取元素
+        var btn = document.getElementById('btn')
+        var oUl = document.getElementById('xinwen')
+        // 第二步：添加点击事件并设置事件处理函数
+        btn.onclick = function(){
+            // 第三步：生出五条新闻，
+            // 第四步：读取数组新闻
+            for(var i = 0; i < 5; i = i + 1){
+                // console.log(arr[i])
+                 // 第五步：把读取的新闻写入oUl
+                oUl.innerHTML = oUl.innerHTML + '<li>' + (arr[i]) + '</li>'
+            }
+           
+        }
+    </script>
+</body>
+
+</html>

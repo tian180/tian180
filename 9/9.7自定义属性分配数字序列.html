@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+           display: inline-block;
+            width: 100px;
+            height: 100px;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <button>0</button>
+    <button>0</button>
+    <button>0</button>
+    <script>
+        // 1获取元素
+        var arr = document.querySelectorAll('button')
+        // 2批量添加点击事件
+        for (var i=0; i<arr.length;i=i+1){
+            arr [i].onclick = function(){
+                // 3.点击按钮，让按钮.innerHTML + 1
+                var n = this.innerHTML*1  + 1
+                // 4.把+1后的结果写入到this.innerhtml
+                this.innerHTML = n
+            }
+        }
+    </script>
+</body>
+</html>

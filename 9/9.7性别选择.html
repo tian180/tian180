@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性别选择</title>
+    <style>
+        .btn {
+            border: none;
+            border-radius: 50px;
+        }
+
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label>性别：</label>
+        <input class="btn" type="button" value="男">
+        <input class="btn" type="button" value="女">
+        <input class="btn" type="button" value="跳过">
+    </form>
+    <script>
+        // 终极目标：点击任意一个input → 切换input的class，并清除掉上一个的class
+        // 1、获取元素
+        var ainput = document.querySelectorAll('.btn')
+        // 2、为input批量添加onclick事件
+        for (var i = 0; i < ainput.length; i = i + 1) {
+        // 4、创建变量（负责记录.bg的变化）
+        ainput[i].add = false
+            ainput[i].onclick = function () {
+                // 3、创建分支任务：①添加bg②清除bg
+                if (!this.add) {//5、设置条件
+                    // 8.在点击按钮后，为当前按钮添加bg类之前，用for循环……
+                    for (var i = 0; i < ainput.length; i = i + 1) {
+                    ainput[i].className = 'btn'
+                    ainput[i].add = false
+                }
+                this.className = 'btn bg'
+                // 7清除bg类之后，修改按钮的add属性的值
+                this.add = true
+            }else {
+                    this.className = 'btn'
+                    this.add = false
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

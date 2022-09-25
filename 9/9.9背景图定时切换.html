@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button>on</button>
+    <button>off</button>
+
+    <script>
+        // 点击on按钮，每隔一秒换body的背景图
+
+        // 点击off按钮，清楚定时器
+
+        // 定义数组
+        var arr = [
+            'images/1.jpg',
+            'images/2.jpg',
+            'images/3.jpg',
+            'images/4.jpg']
+        //1 获取元素
+        var btn = document.querySelectorAll('button')
+        var oBody = document.body
+        // 3 定义一个存储定时器的变量
+        var timer = null
+        // 7:
+        var n = 0
+
+        oBody.style.background =`url(${arr[n]})`
+        // 2点击开始按钮
+        btn[0].onclick = function () {
+            window.clearInterval(timer)
+            // 5:开启定时器
+            timer = window.setInterval(fn, 500)
+            console.log(timer)
+        }
+        // 4:定义fn函数
+        function fn() {
+            // 6:修改body的背景图片
+            oBody.style.background =`url(${arr[n]})`
+
+            //8:让n动起来，以便于切换数组元素
+            n++
+            if(n>3){
+                n=0
+            }
+        }
+        // 点击off按钮 清楚定时器
+        // 要停止定时器，必须知道定时器是一个函数，定时器函数返回值是一个id
+        // window.clearInterval(id)   清楚定时器
+        btn[1].onclick = function(){
+        window.clearInterval(timer)
+    }
+    </script>
+</body>
+
+</html>

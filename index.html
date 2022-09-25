@@ -86,7 +86,7 @@
             <div class="box">
                 <dd><a href="./9/9.1微博.html">1.弹窗恶作剧</a></dd>
                 <dd><a href="9/9.1下拉菜单.html">2.下拉菜单(切换class属性值)</a></dd>
-                <dd><a href="./9/91.控制文字大小.HTML">3.文章字号切换(切换class属性值)</a></dd>
+                <dd><a href="./9/9.1.控制文字大小.HTML">3.文章字号切换(切换class属性值)</a></dd>
                 <dd><a href="./9/9.1我与地坛.html">4.文章样式切换(切换class属性值)</a></dd>
                 <dd><a href="./9/9.1灯泡.html">5.开关灯(切换src属性值)</a></dd>
                 <dd><a href="./9/9.1开关.html">6.开关按钮(切换class属性值)</a></dd>
@@ -121,15 +121,76 @@
                 <dd><a href="./9/9.4字号.html">7.字号边界控制</a></dd>
                 <dd><a href="./9/9.4计数器.html">8.计数器</a></dd>
             </div>
+            <!-- 9.5 -->
+            <h2>9.4 for循环</h2>
+            <div class="box">
+                <dd><a href="./9/9.4隐藏.html">1.输出2000个button到页面</a></dd>
+                <dd><a href="./9/9.4头像切换.html">2.判断大小</a></dd>
+                <dd><a href="#">3.用法5事件</a></dd>
+                <dd><a href="./9/9.5九九乘法表.html">4.九九乘法表</a></dd>
+                <dd><a href="">5.生成10个div</a></dd>
+                <dd><a href="#">6.多彩div</a></dd>
+                <dd><a href="./9/9.4字号.html">7.批量事件</a></dd>
+                <dd><a href="./9/9.4计数器.html">8.旋转的div</a></dd>
+                <dd><a href="./9/9.5点击生成五新闻.html">9.生产5条新闻</a></dd>
+                <dd><a href="./9/9.5生成10个div.html">10.生成10个div</a></dd>
+                <dd><a href="./9/9.5生成10个div.html">11.生成100个div</a></dd>
+                <dd><a href="./9/9.4判断边界.html">12.照片蒙版</a></dd>
+                <dd><a href="./9/9.4轮播图.html">13.珠峰</a></dd>
+            </div>
+            <!-- 9.6 -->
+            <h2>9.6函数</h2>
+            <div class="box">
+                <dd><a href="./9/9.6购物车.html">1.购物车plus</a></dd>
+                <dd><a href="./9/9.3if聊天窗口.html">2.修改标题</a></dd>
+                <dd><a href="#">3.新浪体育轮播图</a></dd>
+                <dd><a href="#">4.五星评价</a></dd>
+            </div>
+            <!-- 9.7号 -->
+            <h2>9.7自定义属性</h2>
+            <div class="box">
+                <dd><a href="./9/9.3聊天.html">1.切换按钮背景色</a></dd>
+                <dd><a href="./9/9.7自定义属性分配数字序列.html">2.控制数字增长</a></dd>
+                <dd><a href="./9/9.7自定义属性.html">3.切换ABCD</a></dd>
+                <dd><a href="./9/9.7性别选择.html">4.选择性别</a></dd>
+                <dd><a href="./9/9.7桌面图标切换.html">5.桌面图标</a></dd>
+                <dd><a href="#">6.QQ列表</a></dd>
+            </div>
+            <!-- 9.8数据类型转换 -->
+            <h2>9.8数据类型转换</h2>
+            <div class="box">
+                <dd><a href="./9/9.3聊天.html">1.判断小数</a></dd>
+                <dd><a href="./9/9.3if聊天窗口.html">2.找数字</a></dd>
+                <dd><a href="#">3.QQ号</a></dd>
+            </div>
+             <!-- 9.9 -->
+             <h2>9.9math对象</h2>
+             <div class="box">
+                 <dd><a href="./9/9.3聊天.html">1.生成一个16进制的随机颜色</a></dd>
+                 <dd><a href="./9/9.9背景图定时切换.html">2.点击按钮自动切换页面背景图片</a></dd>
+                 <dd><a href="#">3.点击按钮自动切换页面背景色</a></dd>
+             </div>
+             <!-- 9.10 -->
+             <h2>9.10 navigtor对象</h2>
+             <div class="box">
+                 <dd><a href="./9/9.3聊天.html">1.生成一个20个0-100之间随机数输出到页面上</a></dd>
+             </div>
         </dl>
     </div>
 
     <script>
+        var h2 = document.querySelectorAll('h2')
         var box = document.querySelectorAll('.box')
         console.log(box)
-        h2.onclick = function(){
-            
+        for(i=0; i<h2.length; i++){
+            for(j=0; j<boxlength; j++){
+            h2[i].onclick = function(){
+               console.log(h2)
+        
+           }    
         }
+        }
+       
     </script>
 </body>
 

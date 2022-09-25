@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+
+    <script>
+        // 获取元素
+        var arr = document.querySelectorAll('button')
+        console.log(arr)
+        // 定义变量
+        // var red = false
+        // 批量添加点击事件
+        for (var i = 0; i < arr.length; i = i + 1) {
+            arr[i].red = false
+            arr[i].onclick = function () {
+                if (this.red){
+                    this.style.background = ''
+                }else{
+                    this.style.background = 'red'
+                }
+                this.red = !this.red
+            }
+        }
+
+    </script>
+</body>
+
+</html>
